@@ -1,4 +1,4 @@
-library my_router;
+library my_route_initializer;
 
 import 'package:angular/angular.dart';
 
