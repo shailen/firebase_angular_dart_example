@@ -1,0 +1,28 @@
+<div my-controller>
+  <div><a href="#/list">Show all</a></div>
+  
+  <div class="well">
+    <form name="myForm">
+      <div class="form-group">
+        <label>Text</label>
+        <input type="text" class="form-control" name="text" ng-model="ctrl.current.text" required>
+      </div>
+     
+      <div class="form-group">
+        <label>URL</label>
+        <input type="url" class="form-control" name="url" ng-model="ctrl.current.url" required>
+      </div>
+     
+      <label>Description</label>
+      <textarea name="description" class="form-control" ng-model="ctrl.current.description"></textarea>
+      <br>
+      <button type="button" class="btn btn-link" ng-click="ctrl.showList()">Cancel</button>
+      <button ng-click="ctrl.saveOrUpdate()" class="btn btn-default">
+          Save</button>
+      <span>
+        <button ng-if="ctrl.linkId != null" ng-click="ctrl.destroy()"
+            class="btn btn-default">Delete</button>
+      </span>
+    </form>
+  </div>
+</div>

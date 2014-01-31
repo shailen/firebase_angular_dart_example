@@ -1,0 +1,21 @@
+<div my-controller>  
+  <input type="text" ng-model="search" class="search-query" placeholder="Search">
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Link</th>
+      <th>Description</th>
+      <th><a href="#/new">+</a></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="link in ctrl.links | filter:search | orderBy:'text'">
+      <td><a href="{{link.url}}" target="_blank">{{link.text}}</a></td>
+      <td>{{link.description}}</td>
+      <td>
+        <a href="#/link/{{link._id}}/edit">edit</a>
+      </td>
+    </tr>
+    </tbody>
+  </table>  
+</div>
